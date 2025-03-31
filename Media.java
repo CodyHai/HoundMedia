@@ -1,4 +1,4 @@
-package Add;
+package AddMedia;
 import java.lang.*;
 
 public class Media {
