@@ -1,4 +1,4 @@
-package Add;
+package AddMedia;
 
 public class Msg {
     String message;
