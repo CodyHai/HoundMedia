@@ -1,4 +1,4 @@
-package Add;
+package AddMedia;
 import java.util.ArrayList;
 
 public class AddMediaController{
