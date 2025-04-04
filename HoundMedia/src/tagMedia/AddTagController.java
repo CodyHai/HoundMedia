@@ -26,7 +26,7 @@ class AddTagController{
         ArrayList<String> p = u.getTags();
 
         if(tag.length() < 50 && tag.length() > 0){
-            if (p.contains(tag)) {
+            if (!p.contains(tag)) {
                     u.addTags(tag);
                     msg.add("tag added");
             }
