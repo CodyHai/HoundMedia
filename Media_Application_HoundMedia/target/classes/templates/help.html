@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Help</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+<body>
+<div th:replace="fragments/header :: body"></div>
+
+<div class="container">
+    <h1>Need Help?</h1>
+    <p>If you're experiencing issues, please describe the problem below.</p>
+
+    <form th:action="@{/help}" th:object="${helpRequest}" method="post">
+        <label>Your Email:</label>
+        <input type="email" th:field="*{email}" />
+        <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></p>
+
+        <label>Your Message:</label>
+        <textarea th:field="*{message}" rows="6"></textarea>
+        <p th:if="${#fields.hasErrors('message')}" th:errors="*{message}" class="error"></p>
+
+        <button type="submit">Submit</button>
+
+        <p th:if="${success}" th:text="${success}" style="color: green; margin-top: 10px;"></p>
+    </form>
+    <p>Need any more help. Email us at HoundMedia@gmail.com.</p>
+    <br>
+    <a href="/home">Back to Home</a>
+</div>
+</body>
+</html>

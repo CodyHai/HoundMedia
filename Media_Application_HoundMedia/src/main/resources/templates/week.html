@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Weekly View</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+<body>
+<div th:replace="fragments/header :: body"></div>
+
+<div class="container">
+    <h1>View Weekly Media</h1>
+
+    <form action="/week" method="get">
+        <label>Month (1–12):</label>
+        <input type="number" name="month" min="1" max="12" required value="1">
+
+        <label>Week (1–4):</label>
+        <input type="number" name="week" min="1" max="4" required value="1">
+
+        <button type="submit">Show Week</button>
+    </form>
+
+    <hr>
+
+    <div th:if="${weekDays != null}">
+        <h2>Media for Month [[${month}]], Week [[${week}]]</h2>
+
+        <div th:each="day, iStat : ${weekDays}">
+            <h3>Day [[${iStat.index + 1}]]</h3>
+            <ul>
+                <li th:each="media : ${day.mediaList}">
+                    <b th:text="${media.name}"></b> —
+                    <span th:text="${media.tag}"></span> —
+                    <span th:text="${media.length} + ' min'"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <a href="/home">Back to Home</a>
+</div>
+</body>
+</html>

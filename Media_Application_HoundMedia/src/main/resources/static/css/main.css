@@ -1,0 +1,147 @@
+/* Reset and base setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff3e0;
+    padding: 2rem;
+    color: #333;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #d23600;
+    margin-bottom: 1rem;
+}
+
+/* Forms */
+form {
+    background-color: #fff;
+    border: 2px solid #ff9800;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;        /* was likely 300px before */
+    margin: 0 auto 2rem auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 0.4rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #d23600;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #a82a00;
+}
+
+/* Links */
+a {
+    color: #d23600;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Media List Styling */
+ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+ul li {
+    margin-bottom: 0.4rem;
+}
+
+/* Layout helpers */
+.center {
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+nav {
+    background-color: #d23600;
+    padding: 1rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+nav a {
+    color: white;
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    margin-top: 1rem;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;     /* was maybe 80px auto or higher */
+    padding: 2rem 3rem;
+    background-color: #ffcc80;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.nav-top-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-top-right a {
+    color: #d23600;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nav-top-right a:hover {
+    text-decoration: underline;
+}
+
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+    margin-bottom: 1rem;
+    font-family: inherit;
+}
