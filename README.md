@@ -42,6 +42,7 @@ Right-click and select Run.
 Open a browser and go to:
 http://localhost:8080/
 
+
 Option 2: Run via Terminal
 Navigate to the project folder.
 Build and run using Maven:
@@ -50,7 +51,8 @@ mvn spring-boot:run
 Open:
 http://localhost:8080/
 
-How the Database is Stored
+
+How the Database is Stored: 
 The project uses Java Serialization to save user data into a file called users.db.
 
 File Location:
@@ -60,9 +62,6 @@ What is Saved:
 A HashMap<String, User> that includes: Username, Password, A 3D array of Day[][][], where each day contains a list of Media objects
 
 How It Works:
-
 When users register or modify their media, the application updates the in-memory map and immediately writes to users.db.
 When the application restarts, it automatically loads all users from users.db.
 
-Serialization Classes:
-User, Day, and Media classes all implement Serializable.
